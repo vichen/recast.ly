@@ -40,6 +40,7 @@ class App extends React.Component {
         <Nav doSearch={this.doSearch.bind(this)}/>
           <div className="col-md-7">
             <VideoPlayer aVideo={this.state.currentVideo}/>
+            <VideoDetails aVideo={this.state.currentVideo}/>
           </div>
           <div className="col-md-5">
             <VideoList allVideos={this.state.allVideos} changeMovie={this.changeMovie.bind(this)}/>
