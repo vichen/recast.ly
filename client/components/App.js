@@ -14,10 +14,18 @@ class App extends React.Component {
     });
   }
 
+  doSearch (newList) {
+    // debugger;
+    this.setState({
+      currentVideo: newList[0],
+      allVideos: newList
+    });
+  }
+
   render () {
     return (
       <div>
-        <Nav />
+        <Nav doSearch={this.doSearch.bind(this)}/>
           <div className="col-md-7">
             <VideoPlayer aVideo={this.state.currentVideo}/>
           </div>
