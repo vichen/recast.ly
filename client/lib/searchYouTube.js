@@ -17,8 +17,8 @@ var searchYouTube = function (options, callback) {
     type: 'GET',
     data: options,
     success: (stuff) => {
-      console.log('success from ajax');
-      console.log(stuff);
+      // console.log('success from ajax');
+      // console.log(stuff);
       // debugger;
       callback.call(this, stuff.items);
     },  

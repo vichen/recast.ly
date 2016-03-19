@@ -3,8 +3,14 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currentVideo: exampleVideoData[0],
-      allVideos: exampleVideoData
+      currentVideo: {
+        id: {videoId: null},
+        snippet: {
+          title: null,
+          description: null
+        }
+      },
+      allVideos: null
     };
   }
 
@@ -16,10 +22,16 @@ class App extends React.Component {
 
   doSearch (newList) {
     // debugger;
-    this.setState({
-      currentVideo: newList[0],
-      allVideos: newList
-    });
+    if (this.state.currentVideo.id.videoId === null) {
+      this.setState({
+        currentVideo: newList[0]
+      });
+    }
+    if (newList[0]) {
+      this.setState({   
+        allVideos: newList
+      });
+    }
   }
 
   render () {
