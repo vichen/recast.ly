@@ -9,8 +9,6 @@ class App extends React.Component {
   }
 
   changeMovie (newVideo) {
-    console.log('made it to parent');
-    // debugger;
     this.setState({
       currentVideo: newVideo
     });
