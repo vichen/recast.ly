@@ -1,21 +1,16 @@
-var VideoList = () => {
-  return (
-    <div className="video-list media">
-      {exampleVideoData.map(aVideo =>
-        <VideoListEntry aVideo={aVideo} />
-      )}
-    </div>
-  );
-};
+class VideoList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="video-list media">
+        {this.props.allVideos.map(aVideo =>
+          <VideoListEntry aVideo={aVideo} changeMovie={this.props.changeMovie}/>
+        )}
+      </div>
+    );
+  }
+}
 window.VideoList = VideoList;
-
-
-//       <VideoListEntry videoData={['first']}/>
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
-      // <VideoListEntry />
