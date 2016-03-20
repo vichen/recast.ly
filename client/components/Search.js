@@ -36,6 +36,10 @@ class Search extends React.Component {
     }
   }
 
+  handleClick(e) {
+    this.props.doClick();
+  }
+
   render() {
     return (
       <div className="search-bar form-inline">
@@ -44,6 +48,7 @@ class Search extends React.Component {
         <button className="btn hidden-sm-down" onClick={this.handleSearch.bind(this)}>
           <span className="glyphicon glyphicon-search"></span>
         </button>
+        <input type='checkbox' onClick={this.handleClick.bind(this)} /> <label>Autoplay</label> 
       </div> 
     );
   }

@@ -10,7 +10,8 @@ class App extends React.Component {
           description: null
         }
       },
-      allVideos: null
+      allVideos: null,
+      autoplay: 0
     };
   }
 
@@ -34,13 +35,24 @@ class App extends React.Component {
     }
   }
 
+  doClick () {
+    if (this.state.autoplay) {
+      this.setState({
+        autoplay: 0
+      });
+    } else {
+      this.setState({
+        autoplay: 1
+      });
+    }
+  }
+
   render () {
     return (
       <div>
-        <Nav doSearch={this.doSearch.bind(this)}/>
+        <Nav doSearch={this.doSearch.bind(this)} doClick={this.doClick.bind(this)}/>
           <div className="col-md-7">
-            <VideoPlayer aVideo={this.state.currentVideo}/>
-            <VideoDetails aVideo={this.state.currentVideo}/>
+            <VideoPlayer aVideo={this.state.currentVideo} autoplay={this.state.autoplay}/>
           </div>
           <div className="col-md-5">
             <VideoList allVideos={this.state.allVideos} changeMovie={this.changeMovie.bind(this)}/>

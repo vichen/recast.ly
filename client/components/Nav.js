@@ -6,7 +6,7 @@ class Nav extends React.Component {
     return (
       <nav className="navbar">
         <div className="col-md-6 col-md-offset-3">
-          <Search doSearch={this.props.doSearch}/>
+          <Search doSearch={this.props.doSearch} doClick={this.props.doClick}/>
         </div>
       </nav>
 

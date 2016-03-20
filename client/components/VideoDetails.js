@@ -1,3 +1,5 @@
+/* INCOMPLETE */
+
 class VideoDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -37,8 +39,8 @@ class VideoDetails extends React.Component {
 window.VideoDetails = VideoDetails;
 
 
-var parameter = {
-      id: '4ZAEBxGipoA',
-      part: 'snippet,statistics',
-      key: YOUTUBE_API_KEY, 
-    };
+// var parameter = {
+//       id: '4ZAEBxGipoA',
+//       part: 'snippet,statistics',
+//       key: YOUTUBE_API_KEY, 
+//     };
